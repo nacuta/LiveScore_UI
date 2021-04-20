@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:pixel_perfect/pixel_perfect.dart';
+// import 'package:pixel_perfect/pixel_perfect.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:social_media_profile_screen/playerSplash_ui.dart';
 import 'package:social_media_profile_screen/signIn_ui.dart';
