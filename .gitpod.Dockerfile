@@ -1,8 +1,18 @@
-FROM gitpod/workspace-full:latest
+FROM debian:stretch
 
-ENV ANDROID_HOME=/workspace/android-sdk \
-    FLUTTER_ROOT=/workspace/flutter \
-    FLUTTER_HOME=/workspace/flutter
+RUN apt-get update && apt-get -y install git curl unzip
 
-RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 8.0.242.j9-adpt"
+RUN apt-get autoremove -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /home/gitpod
+WORKDIR /home/gitpod
+
+ENV PUB_CACHE=/home/gitpod/.pub_cache
+ENV PATH="/home/gitpod/flutter/bin:$PATH"
+
+RUN git clone https://github.com/flutter/flutter && \
+    cd flutter && \
+    /home/gitpod/flutter/bin/flutter config --enable-web && \
+    /home/gitpod/flutter/bin/flutter   --version
