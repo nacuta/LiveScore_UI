@@ -1,6 +1,6 @@
 # Design Flutter - LiveScore Screen
 
-![Design preview for the LiveScore Screen UI ](./assets/images/kilian.png)
+![Design preview for the LiveScore Screen UI ](./assets/images/splash_screen.png)(./assets/images/signIn_Screen.png)
 
 Design by Odama Studio
 
